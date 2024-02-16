@@ -8,6 +8,7 @@ export const initialState = {
 export const reducer = (state, action) => {
   switch (action.type) {
     case Type.ADD_TO_BASKET:
+      // * check if the item exists
       const existingItem = state.basket.find(
         (item) => item.id === action.item.id
       );

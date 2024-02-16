@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
-import {Link} from 'react-router-dom'
-import { DataContext } from "../../Component/DataProvider/Dataprovider";
-import CurrencyFormat from "../../Component/CurrencyFormat/Currency";
+import React, { useContext } from "react";
 import LayOut from "../../Component/Layout/Layout";
-import ProductCard from '../../Component/Products/ProductCard';
-import { Type } from "../../Utility/action.type";
+import { DataContext } from "../../Component/DataProvider/Dataprovider";
+import ProductCard from "../../Component/Products/ProductCard";
+import CurrencyFormat from "../../Component/CurrencyFormat/Currency";
+import { Link } from "react-router-dom";
 import classes from "./Cart.module.css";
+import { Type } from "../../Utility/action.type";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 function Cart() {
@@ -26,12 +26,13 @@ function Cart() {
       id,
     });
   };
+
   return (
     <LayOut>
       <section className={classes.container}>
         <div className={classes.cart__container}>
-          <h2>hello</h2>
-          <h3>Your Shopping Basket </h3>
+          <h2>Hello</h2>
+          <h3>Your shopping basket </h3>
           <hr />
           {basket?.length == 0 ? (
             <p>Opps ! No item in your cart</p>
@@ -85,5 +86,4 @@ function Cart() {
   );
 }
 
-export default Cart
-
+export default Cart;

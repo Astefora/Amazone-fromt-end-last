@@ -1,23 +1,16 @@
-import React from 'react'
-import Layout from '../../Component/Layout/Layout';
-import Caursel from '../../Component/Caruosel/Carousel'
-import Category
-  from '../../Component/Category/category';
-import Product
-  from '../../Component/Products/Product';
-
-
+import React from "react";
+import LayOut from "../../Component/Layout/Layout";
+import Carousel from "../../Component/Caruosel/Carousel";
+import Category from "../../Component/Category/category";
+import Product from "../../Component/Products/Product";
 function Landing() {
   return (
-    <div>
-      <Layout>
-        <Caursel />
-        <Category />
-        <Product />
-      
-    </Layout>
-    </div>
+    <LayOut>
+      <Carousel />
+      <Category />
+      <Product />
+    </LayOut>
   );
 }
 
-export default Landing
+export default Landing;

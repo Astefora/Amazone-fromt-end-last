@@ -25,4 +25,4 @@ function Carouseleefect() {
   )
 }
 
-export default Carouseleefect
+export default Carouseleefect;

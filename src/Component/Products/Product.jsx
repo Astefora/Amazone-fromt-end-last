@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import classes from "../Products/product.module.css";
 import ProductCard from "./ProductCard";
-import Loader from "../../Component/Loader/Loader";
+import classes from "./product.module.css";
+import Loader from "../Loader/Loader";
+
 function Product() {
   const [products, setProducts] = useState();
   const [isLoading, setIsLoading] = useState(false);

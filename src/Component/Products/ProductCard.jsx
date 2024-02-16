@@ -1,19 +1,15 @@
 import React, { useContext } from "react";
 import Rating from "@mui/material/Rating";
-import Currency from "../CurrencyFormat/Currency";
-import classes from "../Products/product.module.css";
+import CurrencyFormat from "../CurrencyFormat/Currency";
+import classes from "./product.module.css";
 import { Link } from "react-router-dom";
-import { DataContext } from "../DataProvider/Dataprovider";
+import { DataContext } from "../../Component/DataProvider/Dataprovider";
 import { Type } from "../../Utility/action.type";
 
 function ProductCard({ product, flex, renderDesc, renderAdd }) {
-  const [state, dispatch] = useContext(DataContext);
-
-  if (!product || !product.rating) {
-    return null;
-  }
-
   const { image, title, id, rating, price, description } = product;
+
+  const [state, dispatch] = useContext(DataContext);
 
   const addToCart = () => {
     dispatch({
@@ -28,6 +24,7 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       },
     });
   };
+
   return (
     <div
       className={`${classes.card__container} ${
@@ -48,7 +45,7 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
         </div>
         <div>
           {/* price */}
-          <Currency amount={price} />
+          <CurrencyFormat amount={price} />
         </div>
         {renderAdd && (
           <button className={classes.button} onClick={addToCart}>
@@ -59,9 +56,5 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
     </div>
   );
 }
-
-
-
-
 
 export default ProductCard;
